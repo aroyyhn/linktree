@@ -1,0 +1,111 @@
+/* Styling untuk container agar lebih minimalis dan shadow */
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow minimalis */
+  max-width: 500px; /* Sesuaikan lebar agar tetap responsif */
+  margin: 100px auto; /* Margin besar untuk atas dan bawah */
+  position: relative; /* Untuk elemen dekoratif */
+}
+
+/* Dekorasi ujung atas dan bawah container */
+.container::before, .container::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #ddd; /* Warna dekoratif */
+  border-radius: 2px;
+}
+
+.container::before {
+  top: -20px; /* Dekorasi di atas container */
+}
+
+.container::after {
+  bottom: -20px; /* Dekorasi di bawah container */
+}
+
+/* Responsiveness untuk layar kecil */
+@media (max-width: 576px) {
+  .container {
+      padding: 20px;
+      max-width: 90%; /* Lebih fleksibel di layar kecil */
+      margin: 30px auto; /* Margin lebih kecil di layar kecil */
+  }
+}
+
+
+/* Styling untuk body */
+body {
+  background-color: #f4f4f4;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Styling foto profil */
+img.rounded-circle {
+  border: 4px solid #fff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling tombol media sosial */
+.fancy-btn {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.fancy-btn i {
+  margin-right: 10px;
+}
+
+/* Instagram */
+.instagram {
+  background-color: #E1306C;
+  color: #fff;
+}
+
+.instagram:hover {
+  background-color: #C13584;
+  transform: translateY(-5px);
+}
+
+/* LinkedIn */
+.linkedin {
+  background-color: #0077B5;
+  color: #fff;
+}
+
+.linkedin:hover {
+  background-color: #005983;
+  transform: translateY(-5px);
+}
+
+/* YouTube */
+.youtube {
+  background-color: #FF0000;
+  color: #fff;
+}
+
+.youtube:hover {
+  background-color: #CC0000;
+  transform: translateY(-5px);
+}
+
+/* Github */
+.github {
+  background-color: #333;
+  color: #fff;
+}
+
+.github:hover {
+  background-color: #24292e;
+  transform: translateY(-5px);
+}
